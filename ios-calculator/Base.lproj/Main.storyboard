@@ -22,127 +22,215 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60.0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-n3-H2e">
-                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-n3-H2e">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="L9Z-MH-aaH"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrt-zV-T4b">
                                 <rect key="frame" x="291.5" y="227" width="62.5" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sin"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="sin"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NmS-gD-Xbf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rh-Qi-dfY">
                                 <rect key="frame" x="291.5" y="429.5" width="62.5" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="pi"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="π"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJS-gi-tKp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-xD-0TD">
                                 <rect key="frame" x="291.5" y="531" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sqrt"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="√"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0L-ei-Wrh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmJ-Mq-sZ5">
                                 <rect key="frame" x="223.5" y="227" width="63" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="*"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="×"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIH-5q-5Hh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-dr-aMa">
                                 <rect key="frame" x="223.5" y="429.5" width="63" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="+"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGP-Fc-f9x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-Ul-DeT">
                                 <rect key="frame" x="223.5" y="531" width="63" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="-"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="−"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3UK-gg-552"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBU-Mz-z3s">
                                 <rect key="frame" x="156.5" y="227" width="62" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="9"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9it-bi-GUi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtu-eg-dIP">
                                 <rect key="frame" x="156.5" y="430" width="62" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myn-vA-e3U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcG-V3-ytZ">
                                 <rect key="frame" x="156.5" y="531" width="62" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="="/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="↩︎"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CrW-OL-Ppd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-WK-eUZ">
                                 <rect key="frame" x="88.5" y="227" width="63" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqO-iD-caw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gV-fq-PHn">
                                 <rect key="frame" x="88.5" y="430" width="63" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="4"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gxg-Gy-Q3a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-dc-2BR">
                                 <rect key="frame" x="88.5" y="531" width="63" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="."/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyF-vF-WjX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDR-eF-NnV">
                                 <rect key="frame" x="21" y="227" width="62.5" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="7"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTh-52-gQR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ6-bs-spq">
                                 <rect key="frame" x="21" y="429.5" width="62.5" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3JA-Y7-Uph"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-5q-h99">
                                 <rect key="frame" x="21" y="531" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qmv-Ma-2Ud"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-mg-j3d">
                                 <rect key="frame" x="291.5" y="328.5" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cos"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="cos"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ex0-Ms-cok"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWr-Ht-Gxa">
                                 <rect key="frame" x="223.5" y="328.5" width="63" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="/"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="÷"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYy-Fe-LZ4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiD-79-4jc">
                                 <rect key="frame" x="88.5" y="328.5" width="63" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoh-qZ-BR4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-cv-COD">
                                 <rect key="frame" x="21" y="328.5" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="4"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYy-LK-AJr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEi-YL-IG6">
                                 <rect key="frame" x="21" y="121" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clear"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFL-9V-GSO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t1-HE-uQk">
                                 <rect key="frame" x="291.5" y="121" width="62.5" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="removeLast"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="⇤"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sm7-wE-Ja5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-jR-IuJ">
                                 <rect key="frame" x="156.5" y="328.5" width="62" height="96.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="6"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UzJ-Tv-46T"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60.0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00s-Tg-fPj">
-                                <rect key="frame" x="0.0" y="52" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00s-Tg-fPj">
+                                <rect key="frame" x="16" y="52" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WqR-t3-Zvz"/>
                                 </constraints>
@@ -152,8 +240,12 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebI-kJ-BOD">
                                 <rect key="frame" x="223.5" y="121" width="63" height="96"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sign"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="+/-"/>
+                                <connections>
+                                    <action selector="performAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oq-mb-xfw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,7 +255,7 @@
                             <constraint firstItem="fMN-5q-h99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="0Yg-G3-1rU"/>
                             <constraint firstItem="tFU-Ul-DeT" firstAttribute="width" secondItem="fMN-5q-h99" secondAttribute="width" id="0gd-ih-QZZ"/>
                             <constraint firstItem="Xtu-eg-dIP" firstAttribute="width" secondItem="HZ6-bs-spq" secondAttribute="width" id="0vF-GQ-gxi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WYW-n3-H2e" secondAttribute="trailing" constant="-16" id="1eK-jq-GKO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WYW-n3-H2e" secondAttribute="trailing" id="1eK-jq-GKO"/>
                             <constraint firstItem="7gV-fq-PHn" firstAttribute="height" secondItem="Xsw-WK-eUZ" secondAttribute="height" id="27m-qe-5wl"/>
                             <constraint firstItem="xrt-zV-T4b" firstAttribute="height" secondItem="5t1-HE-uQk" secondAttribute="height" id="2U6-sk-jN8"/>
                             <constraint firstItem="Ztf-jR-IuJ" firstAttribute="leading" secondItem="RiD-79-4jc" secondAttribute="trailing" constant="5" id="48t-cg-WM3"/>
@@ -183,7 +275,7 @@
                             <constraint firstItem="lDR-eF-NnV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="8wt-Re-1ti"/>
                             <constraint firstItem="OmJ-Mq-sZ5" firstAttribute="height" secondItem="ebI-kJ-BOD" secondAttribute="height" id="989-4Y-WAq"/>
                             <constraint firstItem="UWr-Ht-Gxa" firstAttribute="leading" secondItem="Ztf-jR-IuJ" secondAttribute="trailing" constant="5" id="9gW-6O-xpT"/>
-                            <constraint firstItem="WYW-n3-H2e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="AMn-Sg-9CD"/>
+                            <constraint firstItem="WYW-n3-H2e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AMn-Sg-9CD"/>
                             <constraint firstItem="kc3-dc-2BR" firstAttribute="width" secondItem="fMN-5q-h99" secondAttribute="width" id="As9-oC-IFR"/>
                             <constraint firstItem="kc3-dc-2BR" firstAttribute="top" secondItem="7gV-fq-PHn" secondAttribute="bottom" constant="5" id="BSX-PL-vrF"/>
                             <constraint firstItem="qEi-YL-IG6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="CWw-7o-Rs0"/>
@@ -247,7 +339,7 @@
                             <constraint firstItem="kc3-dc-2BR" firstAttribute="height" secondItem="Xsw-WK-eUZ" secondAttribute="height" id="rwN-xK-M7S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5t1-HE-uQk" secondAttribute="trailing" constant="5" id="sDw-eD-vOs"/>
                             <constraint firstItem="xrt-zV-T4b" firstAttribute="leading" secondItem="OmJ-Mq-sZ5" secondAttribute="trailing" constant="5" id="scH-S7-vRR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="00s-Tg-fPj" secondAttribute="trailing" constant="-16" id="t8F-QE-FZj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="00s-Tg-fPj" secondAttribute="trailing" id="t8F-QE-FZj"/>
                             <constraint firstItem="RiD-79-4jc" firstAttribute="width" secondItem="MDL-mg-j3d" secondAttribute="width" id="uav-Xk-hYq"/>
                             <constraint firstItem="RiD-79-4jc" firstAttribute="leading" secondItem="0gW-cv-COD" secondAttribute="trailing" constant="5" id="vWB-N8-Vcp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xrt-zV-T4b" secondAttribute="trailing" constant="5" id="vWT-Xn-VHA"/>
@@ -258,10 +350,14 @@
                             <constraint firstItem="Td9-xD-0TD" firstAttribute="width" secondItem="fMN-5q-h99" secondAttribute="width" id="yNY-Wk-tfr"/>
                             <constraint firstItem="Td9-xD-0TD" firstAttribute="leading" secondItem="tFU-Ul-DeT" secondAttribute="trailing" constant="5" id="yQZ-ld-GtD"/>
                             <constraint firstItem="fMN-5q-h99" firstAttribute="top" secondItem="HZ6-bs-spq" secondAttribute="bottom" constant="5" id="zC2-RS-idB"/>
-                            <constraint firstItem="00s-Tg-fPj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="zqP-iD-zlJ"/>
+                            <constraint firstItem="00s-Tg-fPj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zqP-iD-zlJ"/>
                             <constraint firstItem="Td9-xD-0TD" firstAttribute="top" secondItem="2rh-Qi-dfY" secondAttribute="bottom" constant="5" id="zxs-TI-O8t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtFieldCurrent" destination="00s-Tg-fPj" id="T6b-wQ-HMU"/>
+                        <outlet property="txtFiledResult" destination="WYW-n3-H2e" id="reG-3f-sXA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
