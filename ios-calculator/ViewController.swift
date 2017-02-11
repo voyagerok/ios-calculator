@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     private var shouldClear: Bool = false
     private var shouldInsertDot: Bool = false
     private var sequenceOpTaps: Int = 0
     private var sequenceRetTaps: Int = 0
-//    private var currentExpression: Expression!
     private var expressionHandle: ExpressionHandle!
     private var unaryExpressionHandle: UnaryExpressionHandle!
     
@@ -25,8 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        txtFieldCurrent.delegate = self
         
         expressionHandle = ExpressionHandle()
         unaryExpressionHandle = UnaryExpressionHandle()

@@ -17,8 +17,7 @@ class ExpressionHandle {
         operationId = nil
     }
     
-    func append(operand: Double,
-                      operationId: String!)
+    func append(operand: Double, operationId: String!)
     {
         let numberExpression = NumberExpression(withValue: operand)
         if currentExpression == nil || self.operationId == nil {
@@ -33,8 +32,7 @@ class ExpressionHandle {
         self.operationId = operationId
     }
     
-    func appendUnary(unaryExpr: UnaryExpression,
-                     operationId: String!) {
+    func appendUnary(unaryExpr: UnaryExpression, operationId: String!) {
         if currentExpression == nil || self.operationId == nil {
             currentExpression = unaryExpr
         }
