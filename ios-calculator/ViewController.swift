@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var pathToHistoryArchive: String!
+    
     private var shouldClear: Bool = false
     private var shouldInsertDot: Bool = false
     private var sequenceOpTaps: Int = 0
     private var sequenceRetTaps: Int = 0
-    private var expressionHandle: ExpressionHandle!
-    private var unaryExpressionHandle: UnaryExpressionHandle!
+    weak var expressionHandle: ExpressionHandle!
+    weak var unaryExpressionHandle: UnaryExpressionHandle!
     
     private var formatter: NumberFormatter!
     
@@ -25,8 +27,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        expressionHandle = ExpressionHandle()
-        unaryExpressionHandle = UnaryExpressionHandle()
+//        let documentsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+//        pathToHistoryArchive = documentsDir?.absoluteString.appending("CalculatorHistory")
+//
+//        if let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(withFile: pathToHistoryArchive) {
+//            expressionHandle = unarchivedObject as! ExpressionHandle
+//            NSLog("Expression handle unarchived")
+//        }
+//        else {
+//            expressionHandle = ExpressionHandle()
+//            NSLog("Expression handle gets default value")
+//        }
+//        
+//        unaryExpressionHandle = UnaryExpressionHandle()
         
         formatter = NumberFormatter()
         formatter.minimumFractionDigits = 0
@@ -159,6 +172,18 @@ class ViewController: UIViewController {
                 print("Nothing to do")
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHistory" {
+            let historyVC = segue.destination as! HistoryViewController
+            historyVC.expressionHandle = expressionHandle
+        }
+    }
+    
+    deinit {
+//        NSKeyedArchiver.archiveRootObject(expressionHandle, toFile: pathToHistoryArchive)
+//        NSLog("Archiving expressionHandle")
     }
 }
 

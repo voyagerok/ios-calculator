@@ -12,10 +12,40 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    private var pathToHistoryArchive: String!
+    var expressionHandle: ExpressionHandle!
+    var unaryExpressionHandle: UnaryExpressionHandle!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let documentsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+        pathToHistoryArchive = documentsDir?.absoluteString.appending("CalculatorHistory")
+        
+        if let archivedData = UserDefaults.standard.object(forKey: "calcHistory") {
+            expressionHandle = NSKeyedUnarchiver.unarchiveObject(with: archivedData as! Data) as! ExpressionHandle
+            NSLog("Expression handle unarchived")
+        }
+        else {
+            expressionHandle = ExpressionHandle()
+            NSLog("Expression handle gets default value")
+        }
+////        if let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(withFile: pathToHistoryArchive) {
+////        if let 
+////            expressionHandle = unarchivedObject as! ExpressionHandle
+////            NSLog("Expression handle unarchived")
+////        }
+////        else {
+//            expressionHandle = ExpressionHandle()
+//            NSLog("Expression handle gets default value")
+////        }
+        unaryExpressionHandle = UnaryExpressionHandle()
+        
+        let navigationVC = window?.rootViewController as! UINavigationController
+        let mainViewController = navigationVC.topViewController as! ViewController
+        mainViewController.expressionHandle = expressionHandle
+        mainViewController.unaryExpressionHandle = unaryExpressionHandle
+        
         return true
     }
 
@@ -39,6 +69,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//        NSKeyedArchiver.archiveRootObject(expressionHandle, toFile: pathToHistoryArchive)
+        let archivedData = NSKeyedArchiver.archivedData(withRootObject: expressionHandle)
+        UserDefaults.standard.set(archivedData, forKey: "calcHistory")
+        NSLog("Archiving expressionHandle")
     }
 
 

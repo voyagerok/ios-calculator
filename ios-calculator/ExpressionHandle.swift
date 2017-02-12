@@ -8,25 +8,45 @@
 
 import UIKit
 
-class ExpressionHandle {
+class ExpressionHandle : NSObject, NSCoding {
     private var currentExpression: Expression!
     private var operationId: String!
+    var operationsHistory: [String]!
     
-    init() {
+    override init() {
         currentExpression = nil
         operationId = nil
+        operationsHistory = []
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        if let decodedHistory = aDecoder.decodeObject(forKey: "operationHistory") as? [String] {
+            operationsHistory = decodedHistory
+        }
+        
+        NSLog("Expression handle init with decoder")
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(operationsHistory, forKey: "operationHistory")
+        NSLog("Expression handle encode")
     }
     
     func append(operand: Double, operationId: String!)
     {
         let numberExpression = NumberExpression(withValue: operand)
-        if currentExpression == nil || self.operationId == nil {
+        if self.operationId == nil || currentExpression == nil {
             currentExpression = numberExpression
         }
         else {
             currentExpression = BinaryExpression(withLeftExpr: currentExpression,
                                                  andRightExpr: numberExpression,
                                                  andOperation: BinaryOperation(withFuncId: self.operationId))
+        }
+        
+        if currentExpression != nil && operationId == nil {
+            operationsHistory.append(currentExpression.toString() + " = " + String(currentExpression.eval()))
         }
         
         self.operationId = operationId
